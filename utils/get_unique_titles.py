@@ -52,7 +52,7 @@ seen = set()
 for item in data:
     mapping = {}
     mapping['label'] = item['title']+ " - " + item['release_date']
-    mapping['id']= item['id']
+    mapping['id']= str(item['id'])
     if tuple(mapping.items()) in seen:
         continue
     else:
