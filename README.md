@@ -4,6 +4,8 @@ https://movie-poster-app.vercel.app/
 
 Supplies backend data for a [movie poster similarity app.](https://github.com/Eli-Jensen/movie-poster-app)
 
+Most of the functionality is in mp_embeddings.ipynb
+
 Uses three different models (CLIP, ResNet-50, VGG16) found via [HuggingFace](https://huggingface.co/). Uses the vector database [Pinecone](https://www.pinecone.io/) to store the embeddings of movie posters taken from [TMDB's popular movie list](https://developer.themoviedb.org/reference/movie-popular-list). A vector database makes it easy to complete similarity searches.
 
 Embeddings in the CLIP index are ranked using cosine similarity. VGG16 and ResNet-50 embeddings are ranked using euclidean distance. These metrics were chosen based on the metrics researchers used to train the models.
